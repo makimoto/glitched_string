@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "glitched_string.gemspec",
     "lib/glitched_string.rb",
     "spec/glitched_string_spec.rb",
     "spec/spec_helper.rb"
