@@ -1,6 +1,15 @@
 = glitched_string
 
-Description goes here.
+This gem adds to_glitch method to String class. to_glitch generates glitched string.
+
+== Installation
+
+ % gem install glitched_string
+
+== Usage
+ require 'glitched_string'
+ 'foo'.to_glitch
+  => "f̐ͩ̇ͬ͌ͯ̄̅͏̸̵̡̢̤̣̩̘̺̭ǫ̷̴̶͙̯̥̖̬͍̘͇͛́͐̑ͤͯ̓o͆̉ͫͩ́̎̔̂͏̵̢͓͈̝̥̤̯̼̗"
 
 == Contributing to glitched_string
  

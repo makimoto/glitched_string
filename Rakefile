@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "glitched_string"
   gem.homepage = "http://github.com/makimoto/glitched_string"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "converter from string to glitched one"
+  gem.description = "This gem adds to_glitch method to String class. to_glitch generates glitched string"
   gem.email = "makimoto@tsuyabu.in"
   gem.authors = ["Shimpei Makimoto"]
   # dependencies defined in Gemfile
