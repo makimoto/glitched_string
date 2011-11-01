@@ -121,7 +121,7 @@ module GlitchedString
 end
 
 class String
-  def to_glitch(options = {})
+  def glitch(options = {})
     options[:upper]  ||= 8
     options[:middle] ||= 8
     options[:lower]  ||= 8
@@ -134,4 +134,9 @@ class String
     end
     return output
   end
+  def glitch!(options = {})
+    self.replace self.glitch
+  end
+  alias :to_glitch :glitch
+  alias :to_glitch! :glitch!
 end
