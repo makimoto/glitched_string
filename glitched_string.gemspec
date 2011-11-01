@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Shimpei Makimoto}]
   s.date = %q{2011-10-31}
-  s.description = %q{This gem adds to_glitch method to String class. to_glitch generates glitched string}
+  s.description = %q{This gem adds some methods to String class. They generates glitched string.}
   s.email = %q{makimoto@tsuyabu.in}
   s.extra_rdoc_files = [
     "LICENSE.txt",
