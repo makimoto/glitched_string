@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{glitched_string}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Shimpei Makimoto}]
-  s.date = %q{2011-10-31}
-  s.description = %q{Yet another glitched string generator library.}
+  s.date = %q{2011-11-01}
+  s.description = %q{This gem adds some methods to String class. They generates glitched string}
   s.email = %q{makimoto@tsuyabu.in}
   s.extra_rdoc_files = [
     "LICENSE.txt",
