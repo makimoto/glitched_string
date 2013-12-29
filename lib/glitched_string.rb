@@ -1,4 +1,5 @@
-module GlitchedString
+# coding: utf-8
+class GlitchedString
   UPPER_CHARS = %W[
     \u030d
     \u030e
@@ -117,26 +118,29 @@ module GlitchedString
     \u0359
     \u035a
     \u0323
-  ] 
+  ].freeze 
+
+  def self.glitch(str, options = {})
+    options[:upper]  ||= 8
+    options[:middle] ||= 8
+    options[:lower]  ||= 8
+    output = ""
+    "".tap do |output|
+      str.each_char.each do |s|
+        output << s
+        output << GlitchedString::UPPER_CHARS.sample(options[:upper].to_i).join
+        output << GlitchedString::MIDDLE_CHARS.sample(options[:middle].to_i).join
+        output << GlitchedString::LOWER_CHARS.sample(options[:lower].to_i).join
+      end
+    end
+  end
 end
 
 class String
   def glitch(options = {})
-    options[:upper]  ||= 8
-    options[:middle] ||= 8
-    options[:lower]  ||= 8
-    output = ''
-    self.split(//).each do |s|
-      output << s
-      output << GlitchedString::UPPER_CHARS.sample(options[:upper].to_i).join
-      output << GlitchedString::MIDDLE_CHARS.sample(options[:middle].to_i).join
-      output << GlitchedString::LOWER_CHARS.sample(options[:lower].to_i).join
-    end
-    return output
+    GlitchedString.glitch(self, options)
   end
   def glitch!(options = {})
-    self.replace self.glitch
+    self.replace(GlitchedString.glitch(self, options))
   end
-  alias :to_glitch :glitch
-  alias :to_glitch! :glitch!
 end
